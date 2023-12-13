@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body{
+    margin:0px;
+    padding:0px;
+    background-image:url('Screenshot (9).png');
+}
+h2{
+    font-size:120px;
+    text-align: center;
+    font-family:chomsky;
+    margin:0px;
+    background-image:linear-gradient(235deg,cyan,limegreen,yellow);
+    background-repeat:no-repeat;
+}
+ input{
+    position:absolute;
+    left:45%;
+    height:20px;
+    width:200px;
+    padding:5px;
+    border-radius:7px;
+    transition:0.2s;
+}
+input:hover{
+    border:3px solid cyan;
+}
+input:focus{
+    border:3px solid lime;
+}
+.inside{
+    position: absolute;
+    top:50%;
+}
+#list{
+    position:absolute;
+    top:30%;
+    left:40%;
+    padding:5px;
+    background-color:white;
+    height:400px;
+    width:400px;
+    border-radius:30px;
+    border:5px solid cyan;
+}
+button{
+    position:absolute;
+    left:60%;
+    padding:5px;
+    border-radius:10px;
+    background-color: beige;
+    transition:.25s;
+}
+button:hover{
+    background-color:rgb(242, 170, 37);
+    color:white;
+}
+
+</style>
+<body>
+
+<h2>To-Do List</h2>
+
+<input type="text" id="count" placeholder="Enter task">
+<button onclick="display()">Submit</button>
+
+<div id="list"></div>
+
+<script>
+var count;
+var emp = [];
+
+function display(){
+    emp[0] = document.getElementById("count").value
+    document.getElementById("list").innerHTML = emp
+}
+
+// function getCount(){
+    //     count = document.getElementById("count").value;
+    //     createInputFields(count);
+// }
+
+// function createInputFields(count){
+    //     for(var i=0; i < count; i++){
+        //         var input = document.createElement("input");
+        //         var br = document.createElement("br")
+        //         input.type = "text";
+        //         input.placeholder = "Enter item " + (i+1);
+        //         input.onchange = function(){ addToDo(this) };
+        //         document.body.appendChild(input);
+        //         document.body.appendChild(br)
+        
+        
+    //     }
+
+//         var button = document.getElementById("clix");
+//         button.innerHTML = "Add";
+//         button.onclick = displayList;
+//         document.body.appendChild(button);
+// }
+
+
+
+// function addToDo(input){
+    //     emp.push(input.value);
+// }
+
+// function displayList(){
+    //     var list = document.getElementById("list");
+    //     list.innerHTML = "";
+
+    //     var ol = document.createElement("ol");
+    //     for(var i=0; i < emp.length; i++){
+        //         var li = document.createElement("li");
+        //         li.innerHTML = emp[i];
+        //         var btn = document.createElement("button");
+        //         btn.textContent = "Remove";
+        //         btn.addEventListener("click", function(){
+            //             ol.removeChild(this.parentNode);
+        //         });
+        //         li.appendChild(btn);
+        //         ol.appendChild(li);
+    //     }
+//     list.appendChild(ol);
+// }
+
+</script>
+
+</body>
+</html>
